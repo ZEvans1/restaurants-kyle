@@ -19,7 +19,6 @@ import static junit.framework.Assert.assertTrue;
  * Created by Kyle on 3/13/2018.
  */
 @Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
-//@RunWith(RobolectricGradleTestRunner.class)
 @RunWith(RobolectricTestRunner.class)
 public class MainActivityTest {
     private MainActivity activity;
