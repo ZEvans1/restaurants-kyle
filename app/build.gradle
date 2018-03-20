@@ -26,6 +26,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildTypes.each {
+        it.buildConfigField 'String', 'YELP_TOKEN', YelpToken
+    }
 }
 
 dependencies {
@@ -35,7 +38,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    testCompile 'org.robolectric:robolectric:3.0'
+    testCompile 'org.robolectric:robolectric:3.7.1'
     testCompile 'org.robolectric:shadows-support-v4:3.0'
     testImplementation "org.robolectric:robolectric:3.7.1"
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {
@@ -46,6 +49,7 @@ dependencies {
     }
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
 
 
 }
