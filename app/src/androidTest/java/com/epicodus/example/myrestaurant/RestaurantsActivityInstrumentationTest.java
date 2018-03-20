@@ -3,6 +3,8 @@ package com.epicodus.example.myrestaurant;
 import android.support.test.rule.ActivityTestRule;
 import android.view.View;
 
+import com.epicodus.example.myrestaurant.ui.RestaurantsActivity;
+
 import org.junit.Rule;
 import org.junit.Test;
 

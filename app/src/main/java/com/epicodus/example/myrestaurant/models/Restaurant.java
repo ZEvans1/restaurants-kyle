@@ -1,10 +1,6 @@
-package com.epicodus.example.myrestaurant;
+package com.epicodus.example.myrestaurant.models;
 
 import java.util.ArrayList;
-
-/**
- * Created by Guest on 3/20/18.
- */
 
 public class Restaurant {
     private String name;

@@ -1,4 +1,8 @@
-package com.epicodus.example.myrestaurant;
+package com.epicodus.example.myrestaurant.services;
+
+
+import com.epicodus.example.myrestaurant.Constants;
+import com.epicodus.example.myrestaurant.models.Restaurant;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,6 +37,7 @@ public class YelpService {
         call.enqueue(callback);
 
     }
+
     public ArrayList<Restaurant> processResults(Response response) {
         ArrayList<Restaurant> restaurants = new ArrayList<>();
 
@@ -66,7 +71,8 @@ public class YelpService {
                 for (int y = 0; y < categoriesJSON.length(); y++) {
                     categories.add(categoriesJSON.getJSONObject(y).getString("title"));
                 }
-                Restaurant restaurant = new Restaurant(name, phone, website, rating, imageUrl, address, latitude, longitude, categories);
+                Restaurant restaurant = new Restaurant(name, phone, website, rating,
+                        imageUrl, address, latitude, longitude, categories);
                 restaurants.add(restaurant);
             }
         }
